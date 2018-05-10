@@ -2,7 +2,7 @@
     Deal with page refresh
 */
 if (performance.navigation.type == 1) {
-     location.replace("bookclub.html");
+     location.replace("index.html");
  }
 
 //global variable for incrementing stuff
