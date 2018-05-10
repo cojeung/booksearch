@@ -1,0 +1,111 @@
+<!doctype HTML>
+<html>
+<head>
+<title>Make a Book List</title>
+<!-- <title>TILES</title> -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" type="text/css" href="reset.css">
+<link rel="stylesheet" type="text/css" href="tiles.css">
+<!-- <link rel="stylesheet" type="text/css" href="bookclub_mobile.css">
+<link rel="stylesheet" type="text/css" href="tiles_mobile.css"> -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+<!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> -->
+
+</head>
+
+<body>
+
+<header>
+<h1 class="title" onclick='document.location.href = "bookclub.html"'>BOOK CLUB</h1>
+<div class="input_box">
+<button id="mag_glass" onclick="reveal_search()">&#x1F50D;</button>
+
+  <div class="search_by">
+  Search for a book by...
+  </div>
+
+  <div class="input_item" id="author_input">
+    <label for="author">Author</label><br />
+    <input id="author" placeholder="ex William Shakespeare">
+  </div><div class="or" id="or1">or</div>
+
+  <div class="input_item" id="title_input">
+    <label for="title">Title</label><br />
+    <input id="title" placeholder="ex Romeo and Juliet">
+  </div><div class="or" id=or2>or</div>
+
+  <div class="input_item" id="isbn_input">
+    <label for="isbn">ISBN</label><br />
+    <input id="isbn" placeholder="ex 000-0-00-000000-0">
+  </div>
+
+  <div class="input_item" id="search_button"><br />
+      <button id="search" onclick="newRequest()">Search</button>
+  </div>
+
+</div>
+
+
+
+
+</header>
+
+
+<main>
+
+<div id="bookDisplay">
+
+  <div id="overlay">
+    <button class="close" onclick="off()">X</button><br/>
+    <div id="text">
+
+      <div id="box_and_arrows">
+        <div class="arrow_button">
+          <button class="arrow" onclick="prev_book()">&larr;</button>
+        </div>
+        <div id="replace_here"></div>
+        <div class="arrow_button">
+          <button class="arrow" onclick="next_book()">&rarr;</button>
+        </div>
+      </div>
+
+
+      <div id="not_found">
+          The book <b>Title</b> by <b>Author</b> or <br />
+          ISBN number <b>000-0-00-000000-0</b> <br />
+          Could not be found. <br /><br />
+          Try another search <br />
+
+          <button id="ok" onclick="off()">OK</button>
+      </div>
+
+      <div id="bad_search">
+          The book <p id="bad_title">Title</p> by <p id="bad_author">Author</p> or <br />
+          ISBN number <p id="bad_isbn">000-0-00-000000-0</p> <br />
+          Could not be found. <br /><br />
+          Try another search <br />
+
+          <button id="ok" onclick="off()">OK</button>
+      </div>
+
+    <button id="keep" onclick="off(); createTile()">Keep</button>
+    </div> <!--close text-->
+
+  </div> <!--close overlay-->
+
+
+</div>
+
+
+
+</main>
+
+<!-- The Javascript for this page -->
+<script src="bookclub.js"> </script>
+
+<!-- The JSONp request -->
+<script id="dummy" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</body>
+</html>

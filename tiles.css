@@ -1,0 +1,608 @@
+@media screen and (min-width:800px) {
+
+/*
+ BLUE = #4A73FF
+*/
+
+
+body {
+	min-height: 100vh;  /* need this line to
+					tell body to fill viewport */
+	font-family: 'Roboto', sans-serif;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	color: blue;
+	justify-content: space-around;
+ }
+
+header {
+	 text-align: left;
+	 padding: 20px;
+	 color: #4A73FF;
+
+	 display: flex;
+	 flex-direction: row;
+	 flex-wrap: wrap;
+}
+
+h1.title {
+   font-size: xx-large;
+   font-weight: light;
+	 margin: 0 !important;
+	 cursor: pointer;
+	 flex: 1 0 auto;
+}
+
+
+main {
+     flex: 1 0 auto;  /* the sticky footer trick without the footer */
+		 display: flex;
+		 flex-direction: column;
+		 background-color: rgba(0,0,0,0.15);
+}
+
+#bookIcon {
+	padding: 20px;
+}
+
+/************ APPEARANCE OF SEARCH BOX AREA *********************/
+
+div.input_box {
+	align-items: center;
+	display:flex;
+	flex-direction: row;
+	flex: 0 0 auto;
+	margin-left: 20px;
+	font-size: large;
+}
+
+button#mag_glass {
+	display:none;
+}
+
+div.input_item {
+	display: block;
+  margin: 0 5px 0 5px;
+}
+
+label {
+	/* font-size: normal; */
+	color: black;
+}
+
+input {
+	border-style: solid;
+	border-radius: 10px;
+	border-color: #4A73FF;
+	font-size: large;
+ 	padding: 10px;
+	/* margin: 10px 0px 10px 0px; */
+}
+
+button#search {
+	background-color: #4A73FF;
+	border-style: solid;
+	border-radius: 10px;
+	border-color: #4A73FF;
+	color: #FFFFFF;
+	font-size: large;
+	flex: 0 0 auto;
+	width: 100px;
+	cursor: pointer;
+	padding: 10px;
+}
+
+/*************** EVERYTHANG ELSE *********************/
+
+p {
+	font-size: medium;
+	margin: 10px;
+}
+
+/* overlay stuff taken from W3Schools */
+div#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.75);
+    z-index: 2;
+    cursor: pointer;
+}
+
+div#text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+}
+
+
+div#box_and_arrows {
+	white-space: nowrap;
+}
+
+div#replace_here {
+	display: inline-block;
+	white-space: normal;
+	vertical-align: text-bottom;
+}
+
+div.arrow_button {
+	display: inline-block;
+	vertical-align: top;
+	padding: 175px 10px 0 10px;
+	white-space: normal;
+}
+
+
+
+button.arrow {
+  background-color: rgba(0,0,0,0.1);
+	border-style: solid;
+	border-radius: 10px;
+	border-color: white;
+	color: #FFFFFF;
+	font-size: xx-large;
+	width: 100px;
+	height: 50px;
+	margin: 0px 30px 0px 30px;
+	cursor: pointer;
+	flex: 0 0 auto;
+}
+
+button.close {
+	background-color: rgba(0,0,0,0.1);
+	border-style: solid;
+	border-radius: 50%;
+	border-color: white;
+	color: #FFFFFF;
+	font-size: x-large;
+	cursor: pointer;
+	float: right;
+	margin: 30px;
+	flex: 0 0 auto;
+}
+
+button#keep {
+	background-color: #4A73FF;
+	border-style: solid;
+	border-radius: 10px;
+	border-color: #4A73FF;
+	color: #FFFFFF;
+	font-size: large;
+	flex: 0 0 auto;
+	margin: 30px;
+	cursor: pointer;
+	padding: 10px;
+	float: right;
+	width: 100px;
+}
+
+button#ok {
+	background-color: #4A73FF;
+	border-style: solid;
+	border-radius: 10px;
+	border-color: #4A73FF;
+	color: #FFFFFF;
+	font-size: large;
+	margin: 30px;
+	cursor: pointer;
+	padding: 10px;
+	width: 100px;
+}
+
+h1#book_title {
+	font-size: large;
+}
+
+div#not_found {
+	text-align: center;
+	vertical-align: middle;
+	line-height: 30px;
+	font-size: large;
+	font-weight: 200;
+	letter-spacing: 1px;
+}
+
+div#bad_search {
+	text-align: center;
+	vertical-align: middle;
+	line-height: 30px;
+	font-size: large;
+	font-weight: 200;
+	letter-spacing: 1px;
+}
+
+div.search_by {
+	display: none;
+}
+
+div.or {
+	display: none;
+}
+
+/*********************** WHITE BOX ****************************/
+
+div#white_box{
+	background-color: white;
+		color: black;
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		width: 450px;
+		height: 350px;
+		padding: 30px;
+}
+
+img {
+	flex: 0 0 45%;
+}
+
+div#book_info {
+	flex: 0 0 45%;
+	overflow: auto;
+
+}
+
+h1#book_title {
+	font-size: x-large;
+	font-weight: 700;
+	text-align: left;
+}
+
+h2#author_name {
+	font-size: x-large;
+	font-weight: 300;
+}
+
+div#book_description {
+	padding-top: 10px;
+}
+
+div#bookDisplay {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+
+
+}
+
+div#tile {
+	flex: 0 0 auto;
+	margin: 20px;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+}
+
+button#tile_close {
+	flex: 0 0 auto;
+
+	background-color: white;
+	border-style: solid;
+	border-radius: 50%;
+	border-color: black;
+	color: black;
+	font-size: large;
+	cursor: pointer;
+	float: right;
+	margin-left: -200px;
+
+}
+
+
+
+} /*end media query for large*/
+
+@media screen and (max-width: 800px) {
+
+  body {
+  	min-height: 100vh;  /* need this line to
+  					tell body to fill viewport */
+  	font-family: 'Roboto', sans-serif;
+  	background-color: white;
+  	display: flex;
+  	flex-direction: column;
+  	color: blue;
+  	justify-content: flex-start;
+    align-items: center;
+   }
+
+   header {
+   	 text-align: left;
+   	 padding: 20px;
+   	 color: #4A73FF;
+
+   	 display: flex;
+   	 flex-direction: column;
+   	 flex-wrap: wrap;
+     align-content: center;
+   }
+
+  h1.title {
+     font-size: xx-large;
+     font-weight: light;
+     text-align: center;
+     vertical-align: middle;
+     padding-bottom: 20px;
+  }
+
+  main {
+    flex: 1 0 auto;  /* the sticky footer trick without the footer */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0,0,0,0.15);
+    width: 100vw;
+  }
+
+  #bookIcon {
+  	padding: 20px;
+  }
+  /************ APPEARANCE OF SEARCH BOX AREA *********************/
+
+  div.search_by {
+
+    display:none;
+  }
+
+  div.input_box {
+  	align-items: center;
+  	display:flex;
+  	flex-direction: column;
+  	flex: 0 0 auto;
+    padding-top: 10px;
+  }
+
+  div.input_item {
+  	/* display: block;
+    margin: 0 5px 0 5px; */
+    display:none;
+  }
+
+  button#mag_glass {
+    display: block;
+    font-size: x-large;
+    width:100px;
+  }
+
+  label {
+  	font-size: x-large;
+    color: #4A73FF;
+  }
+
+  input {
+  	border-style: solid;
+  	border-radius: 10px;
+  	border-color: #4A73FF;
+  	font-size: x-large;
+		padding: 10px;
+  }
+
+  div.or {
+  	/* text-align: center;
+  	font-weight: 700;
+    color: #4A73FF;
+    font-size: x-large; */
+    display: none;
+  }
+
+  div#or1 { display:none; }
+  div#or2 {display:none;}
+
+
+  button#search {
+  	background-color: #4A73FF;
+  	border-style: solid;
+  	border-radius: 10px;
+  	border-color: #4A73FF;
+  	color: #FFFFFF;
+  	font-size: large;
+  	flex: 0 0 auto;
+  	width: 330px;
+  	margin: 20px;
+  	cursor: pointer;
+  	padding: 10px;
+  }
+
+
+
+  /*************** EVERYTHANG ELSE *********************/
+
+  p {
+  	font-size: medium;
+  	margin: 10px;
+  }
+
+  /* overlay stuff taken from W3Schools */
+  div#overlay {
+      position: fixed;
+      display: none;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,0.75);
+      z-index: 2;
+      cursor: pointer;
+  }
+
+  div#text{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      color: white;
+      transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+
+  		display: flex;
+  		flex-direction: column;
+  		align-items: center;
+  }
+
+  button.arrow {
+    background-color: rgba(0,0,0,0.1);
+  	border-style: solid;
+  	border-radius: 10px;
+  	border-color: white;
+  	color: #FFFFFF;
+  	font-size: xx-large;
+  	width: 100px;
+  	height: 50px;
+    margin:5px;
+  	cursor: pointer;
+  	flex: 0 0 auto;
+    text-align: center;
+
+  }
+
+  button.close {
+  	background-color: rgba(0,0,0,0.1);
+  	border-style: solid;
+  	border-radius: 50%;
+  	border-color: white;
+  	color: #FFFFFF;
+  	font-size: x-large;
+  	cursor: pointer;
+  	float: right;
+  	margin: 30px;
+  	flex: 0 0 auto;
+  }
+
+  button#keep {
+  	background-color: #4A73FF;
+  	border-style: solid;
+  	border-radius: 5px;
+  	border-color: #4A73FF;
+  	color: #FFFFFF;
+  	font-size: large;
+  	flex: 0 0 auto;
+  	margin: 30px;
+  	cursor: pointer;
+  	padding: 10px;
+  	float: right;
+  	width: 100px;
+  }
+
+  button#ok {
+  	background-color: #4A73FF;
+  	border-style: solid;
+  	border-radius: 10px;
+  	border-color: #4A73FF;
+  	color: #FFFFFF;
+  	font-size: large;
+  	margin: 30px;
+  	cursor: pointer;
+  	padding: 10px;
+  	width: 100px;
+  }
+
+  div#not_found {
+  	text-align: center;
+  	vertical-align: middle;
+  	line-height: 30px;
+  	font-size: large;
+  	font-weight: 200;
+  	letter-spacing: 1px;
+  }
+
+  div#bad_search {
+  	text-align: center;
+  	vertical-align: middle;
+  	line-height: 30px;
+  	font-size: large;
+  	font-weight: 200;
+  	letter-spacing: 1px;
+  }
+
+/*********************** WHITE BOX ****************************/
+
+
+  div#white_box{
+      background-color: white;
+      color: black;
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 300px;
+      height: 250px;
+      padding: 20px;
+  }
+
+  div.arrow_button {
+    text-align: center;
+  	white-space: normal;
+  }
+
+  img {
+    flex: 0 0 45%;
+  }
+
+  div#book_info {
+    flex: 0 0 50%;
+    overflow: auto;
+  }
+
+  h1#book_title {
+    font-size: medium;
+    font-weight: 700;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  h2#author_name {
+    font-size: medium;
+    font-weight: 300;
+  }
+
+  div#book_description {
+    padding-top: 10px;
+    font-size: small;
+  }
+
+  div#bookDisplay {
+  	display: flex;
+  	flex-direction: column;
+  	flex-wrap: wrap;
+  }
+
+  div#tile {
+  	flex: 0 0 auto;
+  	margin: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+  }
+
+  button#tile_close {
+  	flex: 0 0 auto;
+
+  	background-color: white;
+  	border-style: solid;
+  	border-radius: 50%;
+  	border-color: black;
+  	color: black;
+  	font-size: medium;
+  	cursor: pointer;
+  	float: right;
+  	margin-left: -50px;
+  }
+
+
+
+}
